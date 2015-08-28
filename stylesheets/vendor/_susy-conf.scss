@@ -1,0 +1,8 @@
+@include border-box-sizing;
+
+/* Changing Susy default global settings */
+$susy: (
+    columns: 12,
+    container: 960px,
+    global-box-sizing: border-box
+);
