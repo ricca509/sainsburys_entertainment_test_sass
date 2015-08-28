@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+
+// 0. Extra
+@import "compass/typography/lists/horizontal-list";
+
+// 1. Vendors
+@import
+  'susy',
+  'vendor/susy-conf',
+  'vendor/normalize';
+
+// 2. Configuration and helpers
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
+
+// 3. Base stuff
+@import
+  'base/base';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/aside',
+  'layout/nav',
+  'layout/content';
+
+// 5. Components
+
+// 6. Page-specific styles
+
+// 7. Themes
+@import
+  'themes/default';

@@ -1,0 +1,52 @@
+main {
+    @include container;
+}
+
+.wrap {
+    @include clearfix;
+    margin-bottom: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.links-internal {
+    float: right;
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+.social {
+    .image img {
+        border-radius: 50%;
+    }
+}
+
+/* Desktop */
+@media (min-width: $breakpoint) {
+    article.main {
+        @include span(9);
+    }
+
+    .links-internal {
+        padding: 0 15px 15px 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: $breakpoint) {
+    main {
+        padding: 0 30px;
+    }
+
+    article.main, .article-content, .links-internal {
+        @include span(12);
+    }
+
+    .links-internal {
+        padding: 0;
+    }
+}

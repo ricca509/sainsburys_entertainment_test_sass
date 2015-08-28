@@ -1,0 +1,69 @@
+nav.main {
+    font-size: 1.4rem;
+    padding: 5px;
+
+    .onclick-menu {
+        outline: 0;
+        display: block;
+        -webkit-user-select: none;
+    }
+
+    .onclick-menu:focus {
+        pointer-events: none;
+    }
+    .onclick-menu:focus .onclick-menu-content {
+        display: block;
+        pointer-events: auto;
+        list-style-type: none;
+        padding-left: 0;
+        line-height: 40px;
+    }
+
+    .onclick-menu-content {
+        @include clearfix;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
+
+/* Desktop */
+@media (min-width: $breakpoint) {
+    nav {
+        .onclick-menu-content {
+            @include horizontal-list-container;
+            border: 1px solid $mid-grey;
+        }
+
+        .onclick-menu-content > li  {
+            @include horizontal-list-item;
+
+            @include span(1 of 6);
+
+            &:last-child {
+                @include last;
+            }
+        }
+
+        .onclick-menu:before {
+            content: "";
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: $breakpoint) {
+    nav {
+        text-align: center;
+
+        .onclick-menu-content {
+            display: none
+        }
+
+        .onclick-menu:before {
+            content: "menu";
+            border: 1px solid $mid-grey;
+            padding: 5px;
+            background-color: $light-grey;
+        }
+    }
+}
