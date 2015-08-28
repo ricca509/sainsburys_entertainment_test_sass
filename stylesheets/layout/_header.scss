@@ -7,7 +7,7 @@ header.main {
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: $breakpoint) {
     header.main {
         text-align: center;
 
