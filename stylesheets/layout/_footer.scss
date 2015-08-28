@@ -1,0 +1,17 @@
+footer.main {
+    clear: both;
+    padding: 10px;
+    border: 1px solid $mid-grey;
+    text-align: center;
+
+    .social .image img {
+        margin-right: 20px;
+    }
+}
+
+/* Desktop */
+@media (min-width: $breakpoint) {
+    footer.main {
+        display: none;
+    }
+}
