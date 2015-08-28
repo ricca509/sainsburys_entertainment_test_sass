@@ -1,0 +1,13 @@
+/* Desktop */
+@media (min-width: $breakpoint) {
+    aside {
+        @include span(3 last);
+    }
+}
+
+/* Mobile */
+@media (max-width: $breakpoint) {
+    aside {
+        display: none;
+    }
+}
